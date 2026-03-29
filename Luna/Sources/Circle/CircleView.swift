@@ -67,10 +67,11 @@ class CircleView: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextFi
         addSubview(textFieldNumb)
         
         NSLayoutConstraint.activate([
+            textFieldNumb.leadingAnchor.constraint(equalTo: textField.trailingAnchor, constant: 10),
             textFieldNumb.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
-            textFieldNumb.centerYAnchor.constraint(equalTo: centerYAnchor,  constant: 10),
-            textFieldNumb.widthAnchor.constraint(equalToConstant: 125),
-            textFieldNumb.heightAnchor.constraint(equalToConstant: 40)
+            textFieldNumb.centerYAnchor.constraint(equalTo: textField.centerYAnchor),
+            textFieldNumb.heightAnchor.constraint(equalToConstant: 40),
+            textFieldNumb.widthAnchor.constraint(equalTo: textField.widthAnchor, multiplier: 0.7)
         ])
     }
     
@@ -120,8 +121,7 @@ class CircleView: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextFi
         
         NSLayoutConstraint.activate([
             textField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
-            textField.centerYAnchor.constraint(equalTo: centerYAnchor,  constant: 10),
-            textField.widthAnchor.constraint(equalToConstant: 175),
+            textField.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 10),
             textField.heightAnchor.constraint(equalToConstant: 40)
         ])
         
@@ -135,38 +135,35 @@ class CircleView: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextFi
             label.layer.borderWidth = 2
             label.layer.borderColor = UIColor.white.cgColor
             label.layer.cornerRadius = 5
+            label.clipsToBounds = true
             label.translatesAutoresizingMaskIntoConstraints = false
             label.text = ""
             addSubview(label)
             unusedOptionsLabels.append(label)
-            
-            
-            NSLayoutConstraint.activate([
-                label.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -65),
-                label.centerYAnchor.constraint(equalTo: centerYAnchor, constant: CGFloat(index * 50) + 90),
-                label.widthAnchor.constraint(equalToConstant: 175),
-                label.heightAnchor.constraint(equalToConstant: 40)
-            ])
-            
+
             let resultLabel = UILabel()
             resultLabel.textAlignment = .center
             resultLabel.font = .rounded(ofSize: 17, weight: .semibold)
             resultLabel.textColor = .white
-            
             resultLabel.layer.borderWidth = 2
             resultLabel.layer.borderColor = UIColor.white.cgColor
             resultLabel.layer.cornerRadius = 5
+            resultLabel.clipsToBounds = true
             resultLabel.translatesAutoresizingMaskIntoConstraints = false
             addSubview(resultLabel)
             resultLabels.append(resultLabel)
-            
+
             NSLayoutConstraint.activate([
-                resultLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: CGFloat(index * 50) + 90),
-                resultLabel.widthAnchor.constraint(equalToConstant: 125),
+                label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+                label.centerYAnchor.constraint(equalTo: centerYAnchor, constant: CGFloat(index * 50) + 90),
+                label.heightAnchor.constraint(equalToConstant: 40),
+
+                resultLabel.leadingAnchor.constraint(equalTo: label.trailingAnchor, constant: 10),
+                resultLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
+                resultLabel.centerYAnchor.constraint(equalTo: label.centerYAnchor),
                 resultLabel.heightAnchor.constraint(equalToConstant: 40),
-                resultLabel.leadingAnchor.constraint(equalTo: unusedOptionsLabels[index].trailingAnchor, constant: 10)
+                resultLabel.widthAnchor.constraint(equalTo: label.widthAnchor, multiplier: 0.7)
             ])
-            
         }
         
         let picker = UIPickerView()
@@ -364,19 +361,22 @@ class CircleView: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextFi
         
         NSLayoutConstraint.activate([
             
-            cloudTop.centerXAnchor.constraint(equalTo: centerXAnchor),
+            cloudTop.leadingAnchor.constraint(equalTo: leadingAnchor),
+            cloudTop.trailingAnchor.constraint(equalTo: trailingAnchor),
             cloudTop.topAnchor.constraint(equalTo: topAnchor, constant: 115),
-            
-            cloudBottom.centerXAnchor.constraint(equalTo: centerXAnchor),
-            cloudBottom.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100),
+            cloudTop.heightAnchor.constraint(equalToConstant: 150),
+
+            cloudBottom.leadingAnchor.constraint(equalTo: leadingAnchor),
+            cloudBottom.trailingAnchor.constraint(equalTo: trailingAnchor),
+            cloudBottom.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
+            cloudBottom.heightAnchor.constraint(equalToConstant: 150),
             
             moom.centerXAnchor.constraint(equalTo: centerXAnchor),
             moom.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -180),
             
             imageView.topAnchor.constraint(equalTo: moom.bottomAnchor, constant: -30),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -10),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-            imageView.widthAnchor.constraint(equalTo: widthAnchor),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             
             star.topAnchor.constraint(equalTo: topAnchor),
             star.leadingAnchor.constraint(equalTo: leadingAnchor),
