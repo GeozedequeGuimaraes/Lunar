@@ -98,6 +98,16 @@ Projeto desenvolvido no **Apple Developer Academy** -- CIn-UFPE (Recife, PE, Bra
 
 ---
 
+## Demo
+
+<div align="center">
+
+<img src="Screenshots/demo.gif" width="300" alt="Demo do app">
+
+</div>
+
+---
+
 ## Screenshots
 
 <div align="center">
