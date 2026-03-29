@@ -113,15 +113,11 @@ class IntroView: UIView {
         cloudBottom.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
 //            lunaView.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 66),
-            cloudBottom.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cloudBottom.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cloudBottom.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
-            cloudBottom.heightAnchor.constraint(equalToConstant: 150),
-
-            cloudTop.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cloudTop.trailingAnchor.constraint(equalTo: trailingAnchor),
+            cloudBottom.centerXAnchor.constraint(equalTo: centerXAnchor),
+            cloudBottom.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100),
+            
+            cloudTop.centerXAnchor.constraint(equalTo: centerXAnchor),
             cloudTop.topAnchor.constraint(equalTo: topAnchor, constant: 115),
-            cloudTop.heightAnchor.constraint(equalToConstant: 150),
             
             lunaView.centerXAnchor.constraint(equalTo: centerXAnchor),
             lunaView.topAnchor.constraint(equalTo: cloudTop.bottomAnchor, constant: 300),

@@ -69,29 +69,14 @@ class CloudTopView: UIView {
         cloudTopOne.translatesAutoresizingMaskIntoConstraints = false
         cloudTopTow.translatesAutoresizingMaskIntoConstraints = false
         cloudTopThree.translatesAutoresizingMaskIntoConstraints = false
-
-        cloudTopOne.contentMode = .scaleAspectFill
-        cloudTopTow.contentMode = .scaleAspectFill
-        cloudTopThree.contentMode = .scaleAspectFill
-        cloudTopOne.clipsToBounds = true
-        cloudTopTow.clipsToBounds = true
-        cloudTopThree.clipsToBounds = true
-
+       
         NSLayoutConstraint.activate([
-            cloudTopThree.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cloudTopThree.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cloudTopThree.topAnchor.constraint(equalTo: topAnchor),
-            cloudTopThree.heightAnchor.constraint(equalToConstant: 60),
-
-            cloudTopTow.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cloudTopTow.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cloudTopTow.topAnchor.constraint(equalTo: cloudTopThree.bottomAnchor, constant: -20),
-            cloudTopTow.heightAnchor.constraint(equalToConstant: 60),
-
-            cloudTopOne.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cloudTopOne.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cloudTopOne.topAnchor.constraint(equalTo: cloudTopTow.bottomAnchor, constant: -20),
-            cloudTopOne.heightAnchor.constraint(equalToConstant: 60),
+            cloudTopOne.centerXAnchor.constraint(equalTo: centerXAnchor),
+            cloudTopOne.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -15),
+            cloudTopTow.centerXAnchor.constraint(equalTo: centerXAnchor),
+            cloudTopTow.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -57),
+            cloudTopThree.centerXAnchor.constraint(equalTo: centerXAnchor),
+            cloudTopThree.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -70),
         ])
     }
     

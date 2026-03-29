@@ -66,29 +66,13 @@ class CloudBottomView: UIView {
         cloudBottomOne.translatesAutoresizingMaskIntoConstraints = false
         cloudBottomTow.translatesAutoresizingMaskIntoConstraints = false
         cloudBottomThree.translatesAutoresizingMaskIntoConstraints = false
-
-        cloudBottomOne.contentMode = .scaleAspectFill
-        cloudBottomTow.contentMode = .scaleAspectFill
-        cloudBottomThree.contentMode = .scaleAspectFill
-        cloudBottomOne.clipsToBounds = true
-        cloudBottomTow.clipsToBounds = true
-        cloudBottomThree.clipsToBounds = true
-
         NSLayoutConstraint.activate([
-            cloudBottomOne.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cloudBottomOne.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cloudBottomOne.bottomAnchor.constraint(equalTo: bottomAnchor),
-            cloudBottomOne.heightAnchor.constraint(equalToConstant: 60),
-
-            cloudBottomTow.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cloudBottomTow.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cloudBottomTow.bottomAnchor.constraint(equalTo: cloudBottomOne.topAnchor, constant: 20),
-            cloudBottomTow.heightAnchor.constraint(equalToConstant: 60),
-
-            cloudBottomThree.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cloudBottomThree.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cloudBottomThree.bottomAnchor.constraint(equalTo: cloudBottomTow.topAnchor, constant: 20),
-            cloudBottomThree.heightAnchor.constraint(equalToConstant: 60),
+            cloudBottomOne.centerXAnchor.constraint(equalTo: centerXAnchor),
+            cloudBottomOne.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 25),
+            cloudBottomTow.centerXAnchor.constraint(equalTo: centerXAnchor),
+            cloudBottomTow.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 65),
+            cloudBottomThree.centerXAnchor.constraint(equalTo: centerXAnchor),
+            cloudBottomThree.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 80),
         ])
     }
     

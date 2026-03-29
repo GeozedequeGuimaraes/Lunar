@@ -361,22 +361,19 @@ class CircleView: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextFi
         
         NSLayoutConstraint.activate([
             
-            cloudTop.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cloudTop.trailingAnchor.constraint(equalTo: trailingAnchor),
+            cloudTop.centerXAnchor.constraint(equalTo: centerXAnchor),
             cloudTop.topAnchor.constraint(equalTo: topAnchor, constant: 115),
-            cloudTop.heightAnchor.constraint(equalToConstant: 150),
 
-            cloudBottom.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cloudBottom.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cloudBottom.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
-            cloudBottom.heightAnchor.constraint(equalToConstant: 150),
+            cloudBottom.centerXAnchor.constraint(equalTo: centerXAnchor),
+            cloudBottom.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100),
             
             moom.centerXAnchor.constraint(equalTo: centerXAnchor),
             moom.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -180),
             
             imageView.topAnchor.constraint(equalTo: moom.bottomAnchor, constant: -30),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -10),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+            imageView.widthAnchor.constraint(equalTo: widthAnchor),
             
             star.topAnchor.constraint(equalTo: topAnchor),
             star.leadingAnchor.constraint(equalTo: leadingAnchor),
