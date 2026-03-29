@@ -18,18 +18,6 @@
 
 ---
 
-## Screenshots
-
-<div align="center">
-
-| Tela Inicial | Calculadora |
-|:---:|:---:|
-| <img src="Screenshots/intro.png" width="280"> | <img src="Screenshots/calculator.png" width="280"> |
-
-</div>
-
----
-
 ## Funcionalidades
 
 - **Personagem animada** -- Lunar com animacao frame-by-frame (8 sprites) e efeito flutuante
@@ -65,25 +53,25 @@ Luna/
 │   └── SceneDelegate.swift
 ├── Sources/
 │   ├── Circle/
-│   │   ├── Calculation.swift         ← modelo de calculo
-│   │   ├── CircleView.swift          ← interface da calculadora
+│   │   ├── Calculation.swift        ← modelo de calculo
+│   │   ├── CircleView.swift         ← interface da calculadora
 │   │   └── CircleViewController.swift
 │   ├── CloudView/
-│   │   ├── CloudBottomView.swift     ← nuvens inferiores animadas
-│   │   └── CloudTopView.swift        ← nuvens superiores animadas
+│   │   ├── CloudBottomView.swift    ← nuvens inferiores animadas
+│   │   └── CloudTopView.swift       ← nuvens superiores animadas
 │   ├── Coordinator/
-│   │   ├── Coordinator.swift         ← protocolo base
-│   │   └── MainCoordinator.swift     ← navegacao entre telas
+│   │   ├── Coordinator.swift        ← protocolo base
+│   │   └── MainCoordinator.swift    ← navegacao entre telas
 │   ├── Extensions/
-│   │   └── UIFont+Rounded.swift      ← SF Rounded font
+│   │   └── UIFont+Rounded.swift     ← SF Rounded font
 │   └── Intro/
 │       ├── Controller/
 │       │   └── IntroViewController.swift
 │       └── View/
-│           ├── IntroView.swift       ← tela inicial com menu
-│           └── LunaView.swift        ← personagem animada
+│           ├── IntroView.swift      ← tela inicial com menu
+│           └── LunaView.swift       ← personagem animada
 └── Resources/
-    └── Assets.xcassets/              ← sprites, nuvens, diagramas
+    └── Assets.xcassets/             ← sprites, nuvens, diagramas
 ```
 
 ---
@@ -91,11 +79,15 @@ Luna/
 ## Como Executar
 
 1. Clone o repositorio
-   ```bash
-   git clone https://github.com/GeozedequeGuimaraes/Lunar.git
-   ```
+
+```bash
+git clone https://github.com/GeozedequeGuimaraes/Lunar.git
+```
+
 2. Abra o arquivo `Luna.xcodeproj` no Xcode
+
 3. Selecione um simulador ou dispositivo fisico (iOS 17+)
+
 4. Execute o projeto com `Cmd + R`
 
 ---
@@ -106,12 +98,23 @@ Projeto desenvolvido no **Apple Developer Academy** -- CIn-UFPE (Recife, PE, Bra
 
 ---
 
+## Screenshots
+
+<div align="center">
+
+| Tela Inicial | Calculadora |
+|:---:|:---:|
+| <img src="Screenshots/intro.png" width="280"> | <img src="Screenshots/calculator.png" width="280"> |
+
+</div>
+
+---
+
 ## Autor
 
 <div align="center">
 
 **Geozedeque Guimaraes**
-
 Estudante de Ciencia da Computacao -- CIn-UFPE
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/GeozedequeGuimaraes)
