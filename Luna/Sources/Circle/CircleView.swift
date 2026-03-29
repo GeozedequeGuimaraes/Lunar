@@ -71,7 +71,7 @@ class CircleView: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextFi
             textFieldNumb.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
             textFieldNumb.centerYAnchor.constraint(equalTo: textField.centerYAnchor),
             textFieldNumb.heightAnchor.constraint(equalToConstant: 40),
-            textFieldNumb.widthAnchor.constraint(equalTo: textField.widthAnchor, multiplier: 0.7)
+            textFieldNumb.widthAnchor.constraint(equalTo: textField.widthAnchor)
         ])
     }
     
@@ -162,7 +162,7 @@ class CircleView: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextFi
                 resultLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
                 resultLabel.centerYAnchor.constraint(equalTo: label.centerYAnchor),
                 resultLabel.heightAnchor.constraint(equalToConstant: 40),
-                resultLabel.widthAnchor.constraint(equalTo: label.widthAnchor, multiplier: 0.7)
+                resultLabel.widthAnchor.constraint(equalTo: label.widthAnchor)
             ])
         }
         

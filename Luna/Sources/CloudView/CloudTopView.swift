@@ -70,9 +70,12 @@ class CloudTopView: UIView {
         cloudTopTow.translatesAutoresizingMaskIntoConstraints = false
         cloudTopThree.translatesAutoresizingMaskIntoConstraints = false
 
-        cloudTopOne.contentMode = .scaleToFill
-        cloudTopTow.contentMode = .scaleToFill
-        cloudTopThree.contentMode = .scaleToFill
+        cloudTopOne.contentMode = .scaleAspectFill
+        cloudTopTow.contentMode = .scaleAspectFill
+        cloudTopThree.contentMode = .scaleAspectFill
+        cloudTopOne.clipsToBounds = true
+        cloudTopTow.clipsToBounds = true
+        cloudTopThree.clipsToBounds = true
 
         NSLayoutConstraint.activate([
             cloudTopThree.leadingAnchor.constraint(equalTo: leadingAnchor),

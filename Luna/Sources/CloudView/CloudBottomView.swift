@@ -67,9 +67,12 @@ class CloudBottomView: UIView {
         cloudBottomTow.translatesAutoresizingMaskIntoConstraints = false
         cloudBottomThree.translatesAutoresizingMaskIntoConstraints = false
 
-        cloudBottomOne.contentMode = .scaleToFill
-        cloudBottomTow.contentMode = .scaleToFill
-        cloudBottomThree.contentMode = .scaleToFill
+        cloudBottomOne.contentMode = .scaleAspectFill
+        cloudBottomTow.contentMode = .scaleAspectFill
+        cloudBottomThree.contentMode = .scaleAspectFill
+        cloudBottomOne.clipsToBounds = true
+        cloudBottomTow.clipsToBounds = true
+        cloudBottomThree.clipsToBounds = true
 
         NSLayoutConstraint.activate([
             cloudBottomOne.leadingAnchor.constraint(equalTo: leadingAnchor),
