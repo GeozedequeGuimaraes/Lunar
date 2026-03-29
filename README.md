@@ -12,6 +12,16 @@
 
 ---
 
+## Demo
+
+<div align="center">
+
+<img src="Screenshots/demo.gif" width="300" alt="Demo do app">
+
+</div>
+
+---
+
 ## Sobre o Projeto
 
 **Lunar** e um aplicativo iOS educativo de geometria com uma identidade visual imersiva inspirada no espaco. O app apresenta a Lunar, uma personagem animada que guia o usuario no calculo de propriedades do circulo -- raio, diametro, circunferencia e area -- a partir de qualquer valor conhecido. Toda a interface foi construida programaticamente com UIKit, sem storyboards, utilizando Auto Layout e animacoes customizadas.
@@ -95,16 +105,6 @@ git clone https://github.com/GeozedequeGuimaraes/Lunar.git
 ## Contexto
 
 Projeto desenvolvido no **Apple Developer Academy** -- CIn-UFPE (Recife, PE, Brasil).
-
----
-
-## Demo
-
-<div align="center">
-
-<img src="Screenshots/demo.gif" width="300" alt="Demo do app">
-
-</div>
 
 ---
 
